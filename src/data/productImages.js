@@ -5,7 +5,7 @@ const { robots } = images
 export const productImageByTitle = {
   "Private bathroom": images.bathroom,
   "Private hotel room": robots.fleet,
-  "Fully operated by robots": robots.hero,
+  "Fully operated by robots": robots.patrol,
   "Fast internet": robots.walk,
   "Great lighting": robots.clean,
   "24/7 access": robots.checkin,
@@ -15,7 +15,7 @@ export const productImageByTitle = {
 /** Portrait product thumbs (4:5) — tighter crops than full-width uses */
 export const productThumbObjectPosition = {
   "Private hotel room": "50% 42%",
-  "Fully operated by robots": "50% 8%",
+  "Fully operated by robots": "52% 42%",
   "Fast internet": "55% 50%",
   "Great lighting": "50% 45%",
   "24/7 access": "78% 40%",
