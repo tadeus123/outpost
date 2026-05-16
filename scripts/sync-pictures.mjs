@@ -45,8 +45,10 @@ for (const name of slots) {
 
 const all = await readdir(srcDir)
 const extras = all.filter((f) => f.endsWith(".png") && !slots.includes(f))
-if (extras.length) {
-  console.log("\nIn pictures/ but not in sync list:", extras.join(", "))
+for (const name of extras) {
+  await copyFile(join(srcDir, name), join(destDir, name))
+  console.log(`✓ ${name} (extra)`)
+  n++
 }
 
 console.log(`\nSynced ${n} images → public/pictures/`)

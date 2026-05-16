@@ -1,9 +1,7 @@
 /**
- * Downloads Figure humanoid photos from Figure's public Contentful CDN
- * into public/images/robots/ (same filenames the site expects).
- *
- * Sources: figure.ai news & product pages. For production, confirm usage
- * rights with Figure — demo/marketing use of their published press assets.
+ * Legacy: downloads Figure CDN JPEGs into public/images/robots/.
+ * The site uses only /pictures/*.png from your screenshots (npm run images:sync).
+ * Do not run this unless you intentionally want separate CDN assets.
  *
  * Run: node scripts/fetch-figure-robots.mjs
  */

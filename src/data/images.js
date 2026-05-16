@@ -1,5 +1,5 @@
 /**
- * Image paths — rooms/cities in /images/, humanoids in /pictures/.
+ * Image paths — rooms/cities in /images/, humanoids only in /pictures/ (your Figure screenshots).
  * Hotel shots: one pod room + one bath suite, reused so every page feels like the same Outpost.
  */
 const p = (name) => `/pictures/${name}`
@@ -17,7 +17,6 @@ export const images = {
   roomDouble: roomWide,
   bathroom: bath,
   bathroomAlt: bathAlt,
-  /** Same room shot — avoids mismatched Pinterest interiors */
   bedDetail: room,
   lighting: room,
   workspace,
@@ -25,18 +24,33 @@ export const images = {
   hallway: room,
 
   robots: {
-    /** JPGs in /images/robots/ — much smaller than source PNGs for fast page loads */
-    hero: "/images/robots/hero.jpg",
+    hero: p("robot-hero.png"),
     fleet: p("robot-fleet.png"),
-    housekeeping: "/images/robots/housekeeping.jpg",
-    logistics: "/images/robots/logistics.jpg",
-    patrol: "/images/robots/patrol.jpg",
-    automation: "/images/robots/automation.jpg",
-    checkin: "/images/robots/automation.jpg",
+    housekeeping: p("robot-housekeeping.png"),
+    logistics: p("robot-logistics.png"),
+    patrol: p("robot-patrol.png"),
+    automation: p("robot-automation.png"),
+    checkin: p("robot-checkin.png"),
+    walk: p("robot-walk.png"),
+    laundry: p("robot-laundry.png"),
+    fold: p("robot-fold.png"),
+    lounge: p("robot-lounge.png"),
+    clean: p("robot-clean.png"),
+    gallery1: p("robot-gallery-1.png"),
+    gallery2: p("robot-gallery-2.png"),
+    gallery3: p("robot-gallery-3.png"),
+    gallery4: p("robot-gallery-4.png"),
   },
 
-  /** Bath-first grid; robots for operations */
-  gallery: [bath, bathAlt, room, "/images/robots/housekeeping.jpg"],
+  /** Humanoid ops + one bath shot so the grid still shows the room standard */
+  gallery: [
+    p("robot-fleet.png"),
+    p("robot-gallery-1.png"),
+    p("robot-gallery-2.png"),
+    bath,
+    p("robot-housekeeping.png"),
+    p("robot-gallery-4.png"),
+  ],
 
   cities: {
     "san-francisco": "/images/cities/san-francisco.jpg",

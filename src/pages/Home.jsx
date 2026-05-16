@@ -58,7 +58,7 @@ export default function Home() {
       <section className="page-wide pb-20 md:pb-28">
         <PhotoGallery images={images.gallery} className="fade-in" bookLink />
         <p className="photo-caption mt-4 text-center md:text-left">
-          Same pod room and bath in every city — one standard, not a photo collage.
+          Figure humanoids run housekeeping, laundry, and patrol — plus the same private bath in every city.
         </p>
       </section>
 

@@ -20,15 +20,16 @@ export default function Product() {
         </div>
         <div className="page-wide mt-16 grid gap-3 md:grid-cols-2">
           <PhotoFrame
-            src={images.roomDouble}
-            alt="Duo room"
+            src={images.robots.fleet}
+            alt="Humanoid staff making an Outpost bed"
             aspect="aspect-[4/3]"
+            objectPosition="50% 42%"
             gradientIndex={0}
             to="/book"
           />
           <PhotoFrame
             src={images.robots.hero}
-            alt="Humanoid staff at Outpost"
+            alt="Figure humanoid at Outpost"
             aspect="aspect-[4/3]"
             objectPosition="50% 12%"
             gradientIndex={1}
@@ -72,8 +73,8 @@ export default function Product() {
       <section className="robot-band py-20 md:py-28">
         <div className="page-wide grid gap-10 lg:grid-cols-2 lg:items-center">
           <PhotoFrame
-            src={images.robots.housekeeping}
-            alt="Humanoid housekeeping at Outpost"
+            src={images.robots.fold}
+            alt="Humanoid folding linens at Outpost"
             aspect="aspect-[4/3]"
             className="[&_.photo-frame]:border-white/10"
             gradientIndex={0}

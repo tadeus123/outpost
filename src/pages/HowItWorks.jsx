@@ -67,11 +67,21 @@ export default function HowItWorks() {
             <div key={item.phase} className="border-t border-[var(--color-op-line)] pt-8 lg:border-t-0 lg:pt-0">
               <p className="label">{item.phase}</p>
               <p className="mt-3 text-[15px] leading-relaxed text-[var(--color-op-muted)]">{item.text}</p>
+              {i === 1 && (
+                <div className="mt-6 overflow-hidden rounded-sm">
+                  <Image
+                    src={images.robots.laundry}
+                    alt="Humanoid linen logistics"
+                    className="aspect-[4/3] w-full object-cover"
+                    gradientIndex={2}
+                  />
+                </div>
+              )}
               {i === 2 && (
                 <div className="mt-6 overflow-hidden rounded-sm">
                   <Image
-                    src={images.robots.housekeeping}
-                    alt="Robot room reset"
+                    src={images.robots.patrol}
+                    alt="Humanoid night patrol"
                     className="aspect-[4/3] w-full object-cover"
                     gradientIndex={3}
                   />

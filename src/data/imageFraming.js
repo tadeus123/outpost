@@ -24,6 +24,7 @@ const positions = {
   "/pictures/robot-laundry.png": "50% 40%",
   "/pictures/robot-lounge.png": "50% 35%",
   "/pictures/robot-clean.png": "50% 45%",
+  "/pictures/robot-fold.png": "50% 40%",
 }
 
 export function objectPosition(src) {
