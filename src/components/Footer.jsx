@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import BookLink from "./BookLink"
+import WhatsAppSupport from "./WhatsAppSupport"
 import { brand } from "../data/content"
 
 export default function Footer() {
@@ -23,6 +24,7 @@ export default function Footer() {
       <div className="page-wide pb-10 text-[12px] text-[var(--color-op-faint)]">
         © {new Date().getFullYear()} Outpost
       </div>
+      <WhatsAppSupport />
     </footer>
   )
 }

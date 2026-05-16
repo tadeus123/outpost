@@ -123,6 +123,14 @@
     @apply border-t border-[var(--color-op-line)];
   }
 
+  .footer-support {
+    @apply bg-[#1c1917] text-[#a8a29e];
+  }
+
+  .footer-support-link {
+    @apply text-[#d6d3d1] underline underline-offset-[3px] decoration-[#78716c] transition hover:text-white hover:decoration-white/60;
+  }
+
   .input-field {
     @apply mt-2 w-full min-h-[48px] rounded-lg border border-[var(--color-op-line)] bg-[var(--color-op-surface)] px-4 py-3.5 text-[16px] text-[var(--color-op-text)] outline-none transition placeholder:text-[var(--color-op-faint)] focus:border-[var(--color-op-text)] focus:ring-1 focus:ring-[var(--color-op-text)]/10;
   }
