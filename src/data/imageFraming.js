@@ -9,6 +9,8 @@ const positions = {
   "/images/bathroom-alt.jpg": "50% 36%",
   "/images/community.jpg": "52% 48%",
 
+  "/images/cities/shenzhen.jpg": "50% 40%",
+
   "/pictures/robot-hero.png": "50% 8%",
   "/pictures/robot-automation.png": "50% 30%",
   "/pictures/robot-fleet.png": "50% 42%",

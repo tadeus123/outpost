@@ -39,7 +39,11 @@ const assets = [
   { file: "cities/tokyo.jpg", url: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80" },
   { file: "cities/munich.jpg", url: "https://images.unsplash.com/photo-1595867818082-083862f3d630?w=800&q=80" },
   { file: "cities/singapore.jpg", url: "https://images.unsplash.com/photo-1525621486881-28f57e811ac9?w=800&q=80" },
-  { file: "cities/shenzhen.jpg", url: "https://images.unsplash.com/photo-1599571297969-2b48598d1773?w=800&q=80" },
+  /** Shenzhen Bay, Nanshan — skyline from North Bay Harbor (Unsplash / T Y) */
+  {
+    file: "cities/shenzhen.jpg",
+    url: "https://images.unsplash.com/photo-1759970729294-99c7eebeaf54?w=1400&q=88&fm=jpg",
+  },
   { file: "cities/shanghai.jpg", url: "https://images.unsplash.com/photo-1538428494239-9a0e2717e956?w=800&q=80" },
   { file: "cities/hong-kong.jpg", url: "https://images.unsplash.com/photo-1536599018102-eca06a50476e?w=800&q=80" },
   { file: "cities/guangzhou.jpg", url: "https://images.unsplash.com/photo-1555893527-48ab1ac3fe2f?w=800&q=80" },
