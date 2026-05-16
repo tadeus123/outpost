@@ -26,7 +26,7 @@ export const robots = {
     {
       title: "Laundry & logistics",
       desc: "Linens, towels, supplies — carted building-wide without manual back-of-house labor.",
-      imageKey: "logistics",
+      imageKey: "laundry",
     },
     {
       title: "Night patrol & inspection",

@@ -21,7 +21,7 @@ const positions = {
   "/pictures/robot-gallery-3.png": "50% 40%",
   "/pictures/robot-gallery-4.png": "50% 35%",
   "/pictures/robot-walk.png": "55% 50%",
-  "/pictures/robot-laundry.png": "50% 40%",
+  "/pictures/robot-laundry.png": "48% 62%",
   "/pictures/robot-lounge.png": "50% 35%",
   "/pictures/robot-clean.png": "50% 45%",
   "/pictures/robot-fold.png": "50% 40%",

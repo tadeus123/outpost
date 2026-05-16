@@ -50,6 +50,10 @@ export default function RobotSection({ showLink = true, compact = false }) {
                   src={images.robots[role.imageKey]}
                   alt={role.title}
                   className="absolute inset-0 h-full w-full object-cover"
+                  objectPosition={
+                    role.imageKey === "laundry" ? "48% 62%" : undefined
+                  }
+                  sizes="(min-width: 1024px) 560px, 100vw"
                   gradientIndex={i + 2}
                 />
               </div>
