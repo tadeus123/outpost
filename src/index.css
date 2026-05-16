@@ -127,6 +127,10 @@
     @apply mt-2 w-full min-h-[48px] rounded-lg border border-[var(--color-op-line)] bg-[var(--color-op-surface)] px-4 py-3.5 text-[16px] text-[var(--color-op-text)] outline-none transition placeholder:text-[var(--color-op-faint)] focus:border-[var(--color-op-text)] focus:ring-1 focus:ring-[var(--color-op-text)]/10;
   }
 
+  .city-whisper-input {
+    @apply border-0 border-b border-[var(--color-op-line)] bg-transparent px-0 py-2 text-[15px] text-[var(--color-op-text)] outline-none transition placeholder:font-[family-name:var(--font-serif)] placeholder:italic placeholder:text-[var(--color-op-faint)] focus:border-[var(--color-op-text)] disabled:opacity-50;
+  }
+
   .price-big {
     @apply font-[family-name:var(--font-serif)] text-[40px] font-medium leading-none tracking-[-0.04em] md:text-[48px];
   }

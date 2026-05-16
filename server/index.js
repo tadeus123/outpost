@@ -8,6 +8,7 @@ import {
   retrieveCheckoutSession,
 } from "./lib/stripe.js"
 import { isAllowedOrigin } from "./lib/cors.js"
+import { saveCitySuggestion } from "./lib/citySuggestion.js"
 
 const app = express()
 const PORT = process.env.PORT || 4242
@@ -46,6 +47,16 @@ app.get("/api/checkout-session", async (req, res) => {
   } catch (err) {
     console.error(err)
     res.status(err.status || 500).json({ error: err.message || "Could not load session" })
+  }
+})
+
+app.post("/api/city-suggestion", async (req, res) => {
+  try {
+    await saveCitySuggestion(req.body?.city)
+    res.status(201).json({ ok: true })
+  } catch (err) {
+    if (err.status !== 400) console.error(err)
+    res.status(err.status || 500).json({ error: err.message || "Could not save suggestion" })
   }
 })
 

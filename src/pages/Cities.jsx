@@ -1,4 +1,5 @@
 import BookLink from "../components/BookLink"
+import CityWhisper from "../components/CityWhisper"
 import Image from "../components/Image"
 import SectionHeading from "../components/SectionHeading"
 import { cities } from "../data/content"
@@ -41,6 +42,8 @@ export default function Cities() {
           </BookLink>
         ))}
       </div>
+
+      <CityWhisper />
 
       <ul className="page-narrow mt-16 space-y-0">
         {real.map((city, i) => (

@@ -35,3 +35,19 @@ export async function getStripeConfig() {
 export function publishableKeyFromEnv() {
   return import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || null
 }
+
+export async function submitCitySuggestion(city) {
+  const res = await fetch(`${API_BASE}/api/city-suggestion`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ city }),
+  })
+
+  const data = await res.json().catch(() => ({}))
+
+  if (!res.ok) {
+    throw new Error(data.error || "Could not save your suggestion")
+  }
+
+  return data
+}
