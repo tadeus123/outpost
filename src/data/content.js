@@ -20,7 +20,7 @@ export const robots = {
   roles: [
     {
       title: "Housekeeping",
-      desc: "Room reset after checkout. Surfaces designed for 25-minute cleans. No daily service unless you ask.",
+      desc: "Daily room refresh while you stay, plus a full reset after checkout. Surfaces designed for fast robotic cleans.",
       imageKey: "housekeeping",
     },
     {
@@ -143,7 +143,7 @@ export const product = {
   included: [
     { title: "Private bathroom", desc: "Walk-in rain shower, backlit mirror, stone tile and wood vanity — yours alone, not shared." },
     { title: "Private hotel room", desc: "Your own room — not a dorm. Compact, quiet, designed for sleep and work." },
-    { title: "Fully operated by robots", desc: "Humanoids and automation replace front desk, daily housekeeping, and most night staff." },
+    { title: "Fully operated by robots", desc: "Humanoids run daily housekeeping, laundry, and patrol — no front desk or night staff on site." },
     { title: "Fast internet", desc: "Enterprise Wi-Fi 6/7 with redundant fiber and backup." },
     { title: "Great lighting", desc: "Warm and cool modes, reading light, indirect LED." },
     { title: "24/7 access", desc: "Self check-in, smart locks. The building never closes." },
@@ -158,7 +158,6 @@ export const product = {
   excluded: [
     "Breakfast and kitchen",
     "Front desk and reception",
-    "Daily housekeeping visits",
     "Room service and bellhop",
     "Minibar restocking",
     "Lobby and concierge staff",
