@@ -5,7 +5,6 @@ export const roomTypes = {
     id: "solo",
     name: "Solo room",
     tagline: "Private room for one",
-    pricePerNight: 49,
     maxGuests: 1,
     stripeEnvKey: "STRIPE_PRICE_SOLO",
   },
@@ -13,11 +12,50 @@ export const roomTypes = {
     id: "duo",
     name: "Duo room",
     tagline: "Private room · 2 guests",
-    pricePerNight: 70,
-    pricePerPerson: 35,
     maxGuests: 2,
     stripeEnvKey: "STRIPE_PRICE_DUO",
   },
+}
+
+/** Per-person nightly rates by open city */
+export const cityRates = {
+  "san-francisco": {
+    currency: "USD",
+    soloPerPerson: 40,
+    duoPerPerson: 35,
+    fromPrice: 35,
+  },
+  berlin: {
+    currency: "EUR",
+    soloPerPerson: 25,
+    duoPerPerson: 20,
+    fromPrice: 20,
+  },
+  london: {
+    currency: "GBP",
+    soloPerPerson: 25,
+    duoPerPerson: 20,
+    fromPrice: 20,
+  },
+}
+
+export function getCityRoomTypes(cityId) {
+  const rates = cityRates[cityId]
+  if (!rates) return null
+
+  const { soloPerPerson, duoPerPerson } = rates
+  return {
+    solo: {
+      ...roomTypes.solo,
+      pricePerPerson: soloPerPerson,
+      pricePerNight: soloPerPerson,
+    },
+    duo: {
+      ...roomTypes.duo,
+      pricePerPerson: duoPerPerson,
+      pricePerNight: duoPerPerson * 2,
+    },
+  }
 }
 
 /** Cities open for booking (others show as coming soon on book page) */
@@ -26,8 +64,8 @@ export const bookableCities = [
     id: "san-francisco",
     name: "San Francisco",
     country: "United States",
-    fromPrice: 35,
-    currency: "USD",
+    fromPrice: cityRates["san-francisco"].fromPrice,
+    currency: cityRates["san-francisco"].currency,
     open: true,
     image: images.cities["san-francisco"],
     tagline: "SoMa · Hayes Valley · Mission Bay",
@@ -39,8 +77,8 @@ export const bookableCities = [
     id: "berlin",
     name: "Berlin",
     country: "Germany",
-    fromPrice: 29,
-    currency: "EUR",
+    fromPrice: cityRates.berlin.fromPrice,
+    currency: cityRates.berlin.currency,
     open: true,
     image: images.cities.berlin,
     tagline: "Mitte · Kreuzberg · Friedrichshain",
@@ -52,8 +90,8 @@ export const bookableCities = [
     id: "london",
     name: "London",
     country: "United Kingdom",
-    fromPrice: 32,
-    currency: "GBP",
+    fromPrice: cityRates.london.fromPrice,
+    currency: cityRates.london.currency,
     open: true,
     image: images.cities.london,
     tagline: "Shoreditch · King's Cross",
@@ -115,11 +153,12 @@ export function nightsBetween(checkIn, checkOut) {
   return diff > 0 ? Math.floor(diff) : 0
 }
 
-export function calculateTotal(roomTypeId, nights, guests = 1) {
-  const room = roomTypes[roomTypeId]
+export function calculateTotal(roomTypeId, nights, guests = 1, cityId) {
+  const rooms = getCityRoomTypes(cityId)
+  const room = rooms?.[roomTypeId]
   if (!room || nights < 1) return { nights: 0, perNight: 0, total: 0, guests }
 
-  const perNight = room.id === "duo" ? room.pricePerNight : room.pricePerNight
+  const perNight = room.pricePerNight
   return {
     nights,
     perNight,
@@ -129,8 +168,10 @@ export function calculateTotal(roomTypeId, nights, guests = 1) {
   }
 }
 
+const moneyLocale = { USD: "en-US", EUR: "de-DE", GBP: "en-GB" }
+
 export function formatMoney(amount, currency = "USD") {
-  return new Intl.NumberFormat("en-US", {
+  return new Intl.NumberFormat(moneyLocale[currency] || "en-US", {
     style: "currency",
     currency,
     minimumFractionDigits: 0,

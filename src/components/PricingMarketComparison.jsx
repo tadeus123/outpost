@@ -49,7 +49,10 @@ export default function PricingMarketComparison() {
                   <span className="text-[14px] font-normal text-[var(--color-op-faint)]"> solo</span>
                 </p>
                 <p className="mt-1 text-[15px] text-[var(--color-op-muted)]">
-                  {fmt(city.outpostDuoTotal)} duo · 2 guests
+                  {fmt(city.outpostDuoPerPerson ?? city.outpostDuoTotal / 2)}
+                  <span className="text-[var(--color-op-faint)]"> / person</span>
+                  {" · "}
+                  {fmt(city.outpostDuoTotal)} duo total
                 </p>
                 {save > 0 && (
                   <p className="mt-3 text-[13px] font-medium text-[var(--color-op-warm)]">

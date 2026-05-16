@@ -8,6 +8,7 @@ import { brand } from "../data/content"
 import {
   bookableCities,
   roomTypes,
+  getCityRoomTypes,
   getCity,
   nightsBetween,
   calculateTotal,
@@ -54,6 +55,7 @@ export default function Book() {
   }, [])
 
   const city = getCity(cityId)
+  const cityRooms = useMemo(() => getCityRoomTypes(cityId), [cityId])
 
   const applyDefaultDates = () => {
     const { checkIn: ci, checkOut: co } = defaultStayDates()
@@ -69,7 +71,7 @@ export default function Book() {
 
   const nights = nightsBetween(checkIn, checkOut)
   const guests = roomTypes[roomType]?.maxGuests ?? 1
-  const pricing = calculateTotal(roomType, nights, guests)
+  const pricing = calculateTotal(roomType, nights, guests, cityId)
   const currency = city?.currency || "USD"
 
   const canPay = city?.open && nights > 0 && name.trim() && isValidPhone(phone)
@@ -81,11 +83,11 @@ export default function Book() {
             nights,
             checkIn,
             checkOut,
-            roomName: roomTypes[roomType]?.name,
+            roomName: cityRooms?.[roomType]?.name ?? roomTypes[roomType]?.name,
             total: pricing.total,
           }
         : null,
-    [nights, checkIn, checkOut, roomType, pricing.total],
+    [nights, checkIn, checkOut, roomType, pricing.total, cityRooms],
   )
 
   const handleCity = (id) => {
@@ -106,7 +108,7 @@ export default function Book() {
       cityId,
       cityName: city.name,
       roomType,
-      roomName: roomTypes[roomType].name,
+      roomName: cityRooms[roomType].name,
       checkIn,
       checkOut,
       nights,
@@ -191,7 +193,7 @@ export default function Book() {
                       <p className="text-[16px] font-medium">{c.name}</p>
                       {c.open ? (
                         <p className="text-[12px] text-[var(--color-op-muted)]">
-                          from {formatMoney(c.fromPrice, c.currency)}
+                          from {formatMoney(c.fromPrice, c.currency)}/person
                         </p>
                       ) : (
                         <p className="text-[12px] text-[var(--color-op-faint)]">Soon</p>
@@ -230,26 +232,30 @@ export default function Book() {
               />
 
               <div className="grid gap-3 sm:grid-cols-2">
-                {Object.values(roomTypes).map((room) => (
-                  <button
-                    key={room.id}
-                    type="button"
-                    onClick={() => setRoomType(room.id)}
-                    className={`room-tile touch-manipulation active:scale-[0.99] ${roomType === room.id ? "room-tile-selected" : ""}`}
-                  >
-                    <p className="text-[15px] font-medium">{room.name}</p>
-                    <p className="mt-1 text-[13px] text-[var(--color-op-muted)]">{room.tagline}</p>
-                    <p className="mt-4 text-[22px] font-medium tracking-tight">
-                      {formatMoney(room.pricePerNight, currency)}
-                      <span className="text-[13px] font-normal text-[var(--color-op-faint)]"> / night</span>
-                    </p>
-                    {room.pricePerPerson && (
-                      <p className="text-[12px] text-[var(--color-op-faint)]">
-                        {formatMoney(room.pricePerPerson, currency)} per person
+                {cityRooms &&
+                  Object.values(cityRooms).map((room) => (
+                    <button
+                      key={room.id}
+                      type="button"
+                      onClick={() => setRoomType(room.id)}
+                      className={`room-tile touch-manipulation active:scale-[0.99] ${roomType === room.id ? "room-tile-selected" : ""}`}
+                    >
+                      <p className="text-[15px] font-medium">{room.name}</p>
+                      <p className="mt-1 text-[13px] text-[var(--color-op-muted)]">{room.tagline}</p>
+                      <p className="mt-4 text-[22px] font-medium tracking-tight">
+                        {formatMoney(room.pricePerPerson, currency)}
+                        <span className="text-[13px] font-normal text-[var(--color-op-faint)]">
+                          {" "}
+                          / person / night
+                        </span>
                       </p>
-                    )}
-                  </button>
-                ))}
+                      {room.id === "duo" && (
+                        <p className="text-[12px] text-[var(--color-op-faint)]">
+                          {formatMoney(room.pricePerNight, currency)} total · 2 guests
+                        </p>
+                      )}
+                    </button>
+                  ))}
               </div>
 
               {/* Mobile value + total */}

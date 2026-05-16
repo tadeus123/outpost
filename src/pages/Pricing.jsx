@@ -62,7 +62,7 @@ export default function Pricing() {
               </p>
             </div>
             <p className="mt-16 text-[13px] leading-relaxed text-[var(--color-op-faint)]">
-              San Francisco hotel tax may apply. Prices before tax.
+              Launch bands vary by city (EUR, GBP, USD). Local hotel tax may apply. Prices before tax.
             </p>
           </div>
 

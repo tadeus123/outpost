@@ -51,10 +51,11 @@ export const pricing = {
     {
       id: "solo",
       name: "Solo room",
-      price: 49,
-      unit: "/ night",
-      perPerson: false,
-      description: "Private hotel room for one. Robot-cleaned. No front desk.",
+      price: 25,
+      unit: "/ person / night",
+      perPerson: true,
+      description:
+        "Private room for one. From €25 in Berlin & London, $40 in San Francisco. Robot-cleaned. No front desk.",
       features: [
         "7–9 m² private room",
         "Private bathroom pod",
@@ -67,11 +68,12 @@ export const pricing = {
     {
       id: "duo",
       name: "Duo room",
-      price: 35,
+      price: 20,
       unit: "/ person / night",
       perPerson: true,
-      roomTotal: "From $70/night total",
-      description: "Two guests, one private room. Priced for robot-run operations, not human hotel labor.",
+      roomTotal: "From €40/night for two (Berlin) · $70 in SF",
+      description:
+        "Two guests, one private room. From €20/person in Berlin & London, $35/person in San Francisco.",
       features: [
         "10–13 m² private room",
         "Private bathroom pod",
@@ -83,9 +85,9 @@ export const pricing = {
     },
   ],
   normal: {
-    solo: { launch: 49, normal: "59–69", peak: "89–119" },
-    duoPerPerson: { launch: "34.50–39.50", normal: "39.50–49.50", peak: "59.50–79.50" },
-    duoTotal: { launch: "69–79", normal: "79–99", peak: "119–159" },
+    solo: { launch: "25–40", normal: "28–45", peak: "35–55" },
+    duoPerPerson: { launch: "20–35", normal: "22–38", peak: "28–45" },
+    duoTotal: { launch: "40–70", normal: "44–76", peak: "56–90" },
   },
   addons: [
     { name: "Community day pass", price: "$10–20" },
@@ -109,7 +111,8 @@ export const pricing = {
         currency: "USD",
         comparableLow: 165,
         comparableHigh: 255,
-        outpostSolo: 49,
+        outpostSolo: 40,
+        outpostDuoPerPerson: 35,
         outpostDuoTotal: 70,
       },
       {
@@ -119,8 +122,9 @@ export const pricing = {
         currency: "EUR",
         comparableLow: 95,
         comparableHigh: 165,
-        outpostSolo: 45,
-        outpostDuoTotal: 58,
+        outpostSolo: 25,
+        outpostDuoPerPerson: 20,
+        outpostDuoTotal: 40,
       },
       {
         id: "london",
@@ -129,8 +133,9 @@ export const pricing = {
         currency: "GBP",
         comparableLow: 130,
         comparableHigh: 220,
-        outpostSolo: 46,
-        outpostDuoTotal: 64,
+        outpostSolo: 25,
+        outpostDuoPerPerson: 20,
+        outpostDuoTotal: 40,
       },
     ],
   },
