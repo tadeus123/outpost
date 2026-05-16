@@ -42,15 +42,8 @@ export const images = {
     gallery4: p("robot-gallery-4.png"),
   },
 
-  /** Humanoid ops + one bath shot so the grid still shows the room standard */
-  gallery: [
-    p("robot-fleet.png"),
-    p("robot-gallery-1.png"),
-    p("robot-gallery-2.png"),
-    bath,
-    p("robot-housekeeping.png"),
-    p("robot-gallery-4.png"),
-  ],
+  /** Three-shot editorial grid: fleet hero, second humanoid, private bath */
+  gallery: [p("robot-fleet.png"), p("robot-gallery-2.png"), bath],
 
   cities: {
     "san-francisco": "/images/cities/san-francisco.jpg",
