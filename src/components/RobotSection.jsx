@@ -5,13 +5,13 @@ import { images } from "../data/images"
 
 export default function RobotSection({ showLink = true, compact = false }) {
   return (
-    <section className={compact ? "" : "robot-band"}>
+    <section className="robot-band">
       <div className="page-wide">
         {/* Hero band */}
         <div className="grid gap-0 lg:grid-cols-2 lg:gap-0">
-          <div className="flex flex-col justify-center px-6 py-16 md:px-10 md:py-24 lg:py-32">
+          <div className="flex flex-col justify-center bg-[#1c1917] px-6 py-16 md:px-10 md:py-24 lg:py-32">
             <p className="label-on-dark">Why the price works</p>
-            <h2 className="headline-section-on-dark mt-6 max-w-md">{robots.headline}</h2>
+            <h2 className="headline-section-on-dark mt-6 max-w-md text-white">{robots.headline}</h2>
             <p className="mt-6 max-w-md text-[16px] leading-relaxed text-[#a8a29e]">{robots.subhead}</p>
             {showLink && (
               <Link to="/how-it-works" className="link-on-dark mt-10 inline-block text-[14px]">

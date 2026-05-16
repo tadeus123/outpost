@@ -204,6 +204,10 @@
   /* Robot dark band */
   .robot-band {
     @apply bg-[#1c1917] text-[#fafaf9];
+
+    .headline-section-on-dark {
+      color: #fff;
+    }
   }
 
   .label-on-dark {
@@ -211,7 +215,7 @@
   }
 
   .headline-section-on-dark {
-    @apply font-[family-name:var(--font-serif)] text-[28px] font-medium leading-[1.1] tracking-[-0.02em] text-[#fafaf9] md:text-[36px];
+    @apply font-[family-name:var(--font-serif)] text-[28px] font-medium leading-[1.1] tracking-[-0.02em] text-white md:text-[36px];
   }
 
   .link-on-dark {

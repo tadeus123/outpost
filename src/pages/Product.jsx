@@ -82,7 +82,7 @@ export default function Product() {
           />
           <div>
             <p className="label-on-dark">{brand.robotLine}</p>
-            <h2 className="headline-section-on-dark mt-4">Rooms built for robot housekeeping.</h2>
+            <h2 className="headline-section-on-dark mt-4 text-white">Rooms built for robot housekeeping.</h2>
             <p className="mt-4 text-[15px] leading-relaxed text-[#a8a29e]">
               Humanoid cleaners reset your room after checkout — not a human housekeeper. No carpet, washable surfaces, fast turnarounds.
             </p>
