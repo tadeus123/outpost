@@ -8,7 +8,7 @@ import {
   retrieveCheckoutSession,
 } from "./lib/stripe.js"
 import { isAllowedOrigin } from "./lib/cors.js"
-import { saveCitySuggestion } from "./lib/citySuggestion.js"
+import { citySuggestionsEnabled, saveCitySuggestion } from "./lib/citySuggestion.js"
 
 const app = express()
 const PORT = process.env.PORT || 4242
@@ -23,7 +23,11 @@ app.use(
 app.use(express.json())
 
 app.get("/api/health", (_req, res) => {
-  res.json({ ok: true, stripe: Boolean(stripe) })
+  res.json({
+    ok: true,
+    stripe: Boolean(stripe),
+    citySuggestions: citySuggestionsEnabled(),
+  })
 })
 
 app.get("/api/config", (_req, res) => {

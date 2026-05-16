@@ -1,0 +1,1 @@
+-- Optional local seed data (not applied to production by Supabase GitHub integration)
