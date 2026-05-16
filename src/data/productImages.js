@@ -6,7 +6,6 @@ export const productImageByTitle = {
   "Private bathroom": images.bathroom,
   "Private hotel room": robots.fleet,
   "Fully operated by robots": robots.walk,
-  /** pictures/hotel → workspace.jpg (pod desk + lamp) */
   "Fast internet": images.workspace,
   "Great lighting": images.lighting,
   "24/7 access": robots.checkin,
