@@ -16,8 +16,8 @@ export const productImageByTitle = {
 export const productThumbObjectPosition = {
   "Private hotel room": "50% 42%",
   "Fully operated by robots": "55% 50%",
-  "Fast internet": "42% 48%",
-  "Great lighting": "50% 38%",
+  "Fast internet": "28% 38%",
+  "Great lighting": "50% 36%",
   "24/7 access": "78% 40%",
   "Community area": "50% 35%",
 }

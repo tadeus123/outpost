@@ -18,7 +18,8 @@ export const images = {
   bathroom: bath,
   bathroomAlt: bathAlt,
   bedDetail: room,
-  lighting: room,
+  /** Vanity + niche LEDs — not the pod room shot used for Fast internet */
+  lighting: bathAlt,
   workspace,
   community,
   hallway: room,
