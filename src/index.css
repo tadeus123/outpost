@@ -145,15 +145,33 @@
   }
 
   .editorial-gallery {
-    @apply grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3;
+    @apply grid grid-cols-1 gap-2 sm:grid-cols-[1.12fr_1fr] sm:gap-3;
+    min-height: 0;
+  }
+
+  @media (min-width: 640px) {
+    .editorial-gallery {
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      min-height: min(68vw, 440px);
+      max-height: 480px;
+    }
   }
 
   .editorial-gallery-main {
-    @apply col-span-2 row-span-2 min-h-[240px] overflow-hidden rounded-sm md:min-h-[320px];
+    @apply min-h-[220px] overflow-hidden rounded-sm sm:min-h-0 sm:row-span-2;
+  }
+
+  .editorial-gallery-stack {
+    @apply grid grid-rows-2 gap-2 sm:min-h-0 sm:gap-3;
   }
 
   .editorial-gallery-cell {
-    @apply min-h-[120px] overflow-hidden rounded-sm md:min-h-[155px];
+    @apply min-h-[140px] overflow-hidden rounded-sm sm:min-h-0;
+  }
+
+  .editorial-gallery-main,
+  .editorial-gallery-cell {
+    @apply flex min-h-0 flex-col;
   }
 
   /* Robot dark band */

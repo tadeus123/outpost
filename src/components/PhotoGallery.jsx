@@ -28,6 +28,8 @@ function GalleryCell({ src, className, gradientIndex, bookLink }) {
 export default function PhotoGallery({ images: items, className = "", bookLink = false }) {
   if (!items?.length) return null
 
+  const side = items.slice(1, 3)
+
   return (
     <div className={`editorial-gallery ${className}`}>
       <GalleryCell
@@ -36,15 +38,19 @@ export default function PhotoGallery({ images: items, className = "", bookLink =
         gradientIndex={0}
         bookLink={bookLink}
       />
-      {items.slice(1, 4).map((src, i) => (
-        <GalleryCell
-          key={src}
-          src={src}
-          className="editorial-gallery-cell"
-          gradientIndex={i + 1}
-          bookLink={bookLink}
-        />
-      ))}
+      {side.length > 0 && (
+        <div className="editorial-gallery-stack">
+          {side.map((src, i) => (
+            <GalleryCell
+              key={src}
+              src={src}
+              className="editorial-gallery-cell"
+              gradientIndex={i + 1}
+              bookLink={bookLink}
+            />
+          ))}
+        </div>
+      )}
     </div>
   )
 }
