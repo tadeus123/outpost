@@ -37,6 +37,15 @@ export const cityRates = {
     duoPerPerson: 15,
     fromPrice: 15,
   },
+  /** ~80% below typical Nanshan boutique rates (¥350–500/night → ~20% of market) */
+  shenzhen: {
+    currency: "CNY",
+    soloPerPerson: 80,
+    duoPerPerson: 40,
+    fromPrice: 40,
+    comparableLow: 280,
+    comparableHigh: 520,
+  },
 }
 
 export function getCityRoomTypes(cityId) {
@@ -98,6 +107,19 @@ export const bookableCities = [
     address: "100 Shoreditch High St, London E1 6JQ, UK",
     lat: 51.5246,
     lng: -0.078,
+  },
+  {
+    id: "shenzhen",
+    name: "Shenzhen",
+    country: "China",
+    fromPrice: cityRates.shenzhen.fromPrice,
+    currency: cityRates.shenzhen.currency,
+    open: true,
+    image: images.cities.shenzhen,
+    tagline: "Nanshan · Futian · Huaqiangbei",
+    address: "1001 Shennan Blvd N, Nanshan, Shenzhen, Guangdong 518000, China",
+    lat: 22.5405,
+    lng: 113.9345,
   },
   {
     id: "new-york",
@@ -168,7 +190,7 @@ export function calculateTotal(roomTypeId, nights, guests = 1, cityId) {
   }
 }
 
-const moneyLocale = { USD: "en-US", EUR: "de-DE", GBP: "en-GB" }
+const moneyLocale = { USD: "en-US", EUR: "de-DE", GBP: "en-GB", CNY: "zh-CN" }
 
 export function formatMoney(amount, currency = "USD") {
   return new Intl.NumberFormat(moneyLocale[currency] || "en-US", {
@@ -177,6 +199,11 @@ export function formatMoney(amount, currency = "USD") {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(amount)
+}
+
+export function stripeCurrencyCode(currency) {
+  const map = { USD: "usd", EUR: "eur", GBP: "gbp", CNY: "cny" }
+  return map[currency] || "usd"
 }
 
 export function minCheckOut(checkIn) {

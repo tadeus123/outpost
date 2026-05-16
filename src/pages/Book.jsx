@@ -13,6 +13,7 @@ import {
   nightsBetween,
   calculateTotal,
   formatMoney,
+  stripeCurrencyCode,
   defaultStayDates,
   isValidPhone,
 } from "../data/booking"
@@ -113,7 +114,7 @@ export default function Book() {
       checkOut,
       nights,
       total: pricing.total,
-      currency: currency === "GBP" ? "gbp" : currency === "EUR" ? "eur" : "usd",
+      currency: stripeCurrencyCode(currency),
       phone: phone.trim(),
       name: name.trim(),
       guests,

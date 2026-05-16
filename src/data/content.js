@@ -10,7 +10,7 @@ export const brand = {
   promise:
     "Private rooms. Shared energy. Hotel-level cleanliness. Hostel-level affordability.",
   robotThesis:
-    "In San Francisco, London, and New York, labor is the biggest line item — front desk, housekeeping, night staff, laundry. Humanoid robots run the building instead. That is how private hotel rooms get cheap.",
+    "In San Francisco, London, Shenzhen, and New York, labor is the biggest line item — front desk, housekeeping, night staff, laundry. Humanoid robots run the building instead. That is how private hotel rooms get cheap.",
 }
 
 export const robots = {
@@ -55,7 +55,7 @@ export const pricing = {
       unit: "/ person / night",
       perPerson: true,
       description:
-        "Private room for one. From €25 in Berlin & £25 in London, $35 in San Francisco. Robot-cleaned. No front desk.",
+        "Private room for one. From ¥80 in Shenzhen, €25 in Berlin, £25 in London, $35 in SF. Robot-cleaned. No front desk.",
       features: [
         "7–9 m² private room",
         "Private bathroom pod",
@@ -71,9 +71,9 @@ export const pricing = {
       price: 15,
       unit: "/ person / night",
       perPerson: true,
-      roomTotal: "From €30/night for two (Berlin) · $50 in SF",
+      roomTotal: "From ¥80/night for two (Shenzhen) · $50 in SF",
       description:
-        "Two guests, one private room. From €15/person in Berlin & £15/person in London, $25/person in San Francisco.",
+        "Two guests, one private room. From ¥40/person in Shenzhen, €15 in Berlin, £15 in London, $25 in SF.",
       features: [
         "10–13 m² private room",
         "Private bathroom pod",
@@ -85,9 +85,9 @@ export const pricing = {
     },
   ],
   normal: {
-    solo: { launch: "25–35", normal: "28–40", peak: "32–48" },
-    duoPerPerson: { launch: "15–25", normal: "16–28", peak: "20–35" },
-    duoTotal: { launch: "30–50", normal: "32–56", peak: "40–70" },
+    solo: { launch: "25–80", normal: "28–90", peak: "32–110" },
+    duoPerPerson: { launch: "15–40", normal: "16–45", peak: "20–55" },
+    duoTotal: { launch: "30–80", normal: "32–90", peak: "40–110" },
   },
   addons: [
     { name: "Community day pass", price: "$10–20" },
@@ -137,6 +137,17 @@ export const pricing = {
         outpostDuoPerPerson: 15,
         outpostDuoTotal: 30,
       },
+      {
+        id: "shenzhen",
+        name: "Shenzhen",
+        areas: "Nanshan · Futian · Huaqiangbei",
+        currency: "CNY",
+        comparableLow: 280,
+        comparableHigh: 520,
+        outpostSolo: 80,
+        outpostDuoPerPerson: 40,
+        outpostDuoTotal: 80,
+      },
     ],
   },
 }
@@ -181,7 +192,7 @@ export const cities = [
   { id: "tokyo", name: "Tokyo", region: "Japan", status: "coming", areas: "Shinjuku, Shibuya, Ueno" },
   { id: "munich", name: "Munich", region: "Germany", status: "coming", areas: "Central, Schwabing" },
   { id: "singapore", name: "Singapore", region: "Singapore", status: "coming", areas: "Bugis, Tanjong Pagar, Chinatown" },
-  { id: "shenzhen", name: "Shenzhen", region: "China", status: "future", areas: "Nanshan, Futian" },
+  { id: "shenzhen", name: "Shenzhen", region: "China", status: "flagship", areas: "Nanshan, Futian, Huaqiangbei" },
   { id: "shanghai", name: "Shanghai", region: "China", status: "future", areas: "Jing'an, Huangpu" },
   { id: "hong-kong", name: "Hong Kong", region: "China", status: "future", areas: "Central edge, Kowloon" },
   { id: "guangzhou", name: "Guangzhou", region: "China", status: "future", areas: "Tianhe, Haizhu" },

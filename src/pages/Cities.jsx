@@ -3,7 +3,6 @@ import Image from "../components/Image"
 import SectionHeading from "../components/SectionHeading"
 import { cities } from "../data/content"
 import { bookableCities } from "../data/booking"
-import { images } from "../data/images"
 
 const openIds = new Set(bookableCities.filter((c) => c.open).map((c) => c.id))
 
@@ -20,22 +19,24 @@ export default function Cities() {
       </div>
 
       <div className="page-wide mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {real.slice(0, 6).map((city) => (
+        {bookableCities
+          .filter((c) => c.open)
+          .map((city) => (
           <BookLink
             key={city.id}
-            to={openIds.has(city.id) ? `/book?city=${city.id}#book-details` : "/book"}
+            to={`/book?city=${city.id}#book-details`}
             className="group overflow-hidden rounded-lg border border-[var(--color-op-line)] bg-[var(--color-op-surface)] transition hover:shadow-[0_12px_40px_-12px_rgba(28,25,23,0.12)]"
           >
             <div className="aspect-[16/10] overflow-hidden">
               <Image
-                src={images.cities[city.id]}
+                src={city.image}
                 alt={city.name}
                 className="zoom-on-hover h-full w-full object-cover"
               />
             </div>
             <div className="p-4">
               <h3 className="text-[16px] font-medium">Outpost {city.name}</h3>
-              <p className="mt-1 text-[13px] text-[var(--color-op-muted)]">{city.areas}</p>
+              <p className="mt-1 text-[13px] text-[var(--color-op-muted)]">{city.tagline}</p>
             </div>
           </BookLink>
         ))}
