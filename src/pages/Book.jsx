@@ -38,7 +38,7 @@ export default function Book() {
   const [checkIn, setCheckIn] = useState(initialDates.checkIn)
   const [checkOut, setCheckOut] = useState(initialDates.checkOut)
   const [roomType, setRoomType] = useState(
-    preRoom && roomTypes[preRoom] ? preRoom : "duo",
+    preRoom && roomTypes[preRoom] ? preRoom : "solo",
   )
   const [name, setName] = useState("")
   const [phone, setPhone] = useState("")
