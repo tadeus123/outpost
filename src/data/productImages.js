@@ -7,7 +7,7 @@ export const productImageByTitle = {
   "Private hotel room": robots.fleet,
   "Fully operated by robots": robots.walk,
   "Fast internet": images.workspace,
-  "Great lighting": robots.clean,
+  "Great lighting": images.lighting,
   "24/7 access": robots.checkin,
   "Community area": robots.lounge,
 }
