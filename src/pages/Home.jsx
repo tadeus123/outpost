@@ -70,7 +70,7 @@ export default function Home() {
         <div className="page-wide">
           <SectionHeading
             title="Private hotel room. Nothing you don't need."
-            subtitle="No breakfast. No front desk. No daily housekeeping unless you ask."
+            subtitle="No breakfast. No front desk."
             align="center"
           />
           <ul className="mt-16 space-y-0">
