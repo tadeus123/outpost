@@ -128,7 +128,7 @@ export default function Home() {
 
       <section className="divider section-space">
         <div className="page-wide">
-          <div className="grid gap-3 md:grid-cols-3">
+          <div className="grid gap-3 md:grid-cols-2">
             <PhotoFrame
               src={images.bathroom}
               alt="Walk-in rain shower"
@@ -138,19 +138,10 @@ export default function Home() {
               to="/book"
             />
             <PhotoFrame
-              src={images.bathroomAlt}
-              alt="Vanity with backlit mirror"
-              aspect="aspect-[3/4]"
-              objectPosition="50% 36%"
-              gradientIndex={1}
-              to="/book"
-            />
-            <PhotoFrame
               src={images.roomSingle}
               alt="Outpost pod room"
               aspect="aspect-[3/4]"
-              gradientIndex={2}
-              className="hidden md:block"
+              gradientIndex={1}
               to="/book"
             />
           </div>
