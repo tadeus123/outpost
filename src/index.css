@@ -172,13 +172,12 @@
       grid-row: 1 / span 2;
       display: grid;
       grid-template-rows: 1fr 1fr;
-      gap: 0.75rem;
       min-height: 0;
     }
   }
 
   .editorial-gallery-stack {
-    @apply grid grid-cols-1 gap-2 sm:gap-0;
+    @apply grid grid-cols-1 gap-2 sm:gap-3;
   }
 
   .editorial-gallery-cell {
