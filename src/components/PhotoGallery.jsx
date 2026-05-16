@@ -15,14 +15,16 @@ function GalleryCell({ src, className, gradientIndex, bookLink }) {
     return (
       <BookLink
         to="/book"
-        className={`group block h-full w-full overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-op-text)] ${className}`}
+        className={`group relative block h-full min-h-0 w-full overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-op-text)] ${className}`}
       >
         {image}
       </BookLink>
     )
   }
 
-  return <div className={className}>{image}</div>
+  return (
+    <div className={`relative h-full min-h-0 overflow-hidden ${className}`}>{image}</div>
+  )
 }
 
 export default function PhotoGallery({ images: items, className = "", bookLink = false }) {
