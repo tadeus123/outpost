@@ -27,9 +27,6 @@ export default function Pricing() {
         <div className="page-narrow">
           <p className="label">Outpost rates</p>
           <h2 className="headline-section mt-4">What you pay</h2>
-          <p className="lead mt-6 max-w-[540px]">
-            Launch pricing while we open the first buildings. Robot operations — not robot guests.
-          </p>
           <PricingCards />
         </div>
       </section>
