@@ -55,7 +55,7 @@ export const pricing = {
       unit: "/ person / night",
       perPerson: true,
       description:
-        "Private room for one. From ¥80 in Shenzhen, €25 in Berlin, £25 in London, $35 in SF. Robot-cleaned. No front desk.",
+        "Private room for one. From ¥100 in Shenzhen, €25 in Berlin, £25 in London, $35 in SF. Robot-cleaned. No front desk.",
       features: [
         "7–9 m² private room",
         "Private bathroom pod",
@@ -71,9 +71,9 @@ export const pricing = {
       price: 15,
       unit: "/ person / night",
       perPerson: true,
-      roomTotal: "From ¥80/night for two (Shenzhen) · $50 in SF",
+      roomTotal: "From ¥120/night for two (Shenzhen) · $50 in SF",
       description:
-        "Two guests, one private room. From ¥40/person in Shenzhen, €15 in Berlin, £15 in London, $25 in SF.",
+        "Two guests, one private room. From ¥60/person in Shenzhen, €15 in Berlin, £15 in London, $25 in SF.",
       features: [
         "10–13 m² private room",
         "Private bathroom pod",
@@ -144,9 +144,9 @@ export const pricing = {
         currency: "CNY",
         comparableLow: 280,
         comparableHigh: 520,
-        outpostSolo: 80,
-        outpostDuoPerPerson: 40,
-        outpostDuoTotal: 80,
+        outpostSolo: 100,
+        outpostDuoPerPerson: 60,
+        outpostDuoTotal: 120,
       },
     ],
   },

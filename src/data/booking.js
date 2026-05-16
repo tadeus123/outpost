@@ -40,9 +40,9 @@ export const cityRates = {
   /** ~80% below typical Nanshan boutique rates (¥350–500/night → ~20% of market) */
   shenzhen: {
     currency: "CNY",
-    soloPerPerson: 80,
-    duoPerPerson: 40,
-    fromPrice: 40,
+    soloPerPerson: 100,
+    duoPerPerson: 60,
+    fromPrice: 60,
     comparableLow: 280,
     comparableHigh: 520,
   },
