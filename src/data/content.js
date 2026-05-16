@@ -1,11 +1,11 @@
 export const brand = {
   name: "Outpost",
   headline:
-    "Affordable private hotel rooms from $35/night in the world's most expensive cities.",
+    "Affordable private hotel rooms from $25/night in the world's most expensive cities.",
   pitch:
     "Clean rooms. Private bathrooms. Fast internet. Great lighting. 24/7 access. No breakfast, no fluff, no hostel bunks. Just a better-priced hotel room for the night.",
   tagline:
-    "Affordable private hotel rooms from $35/night in the world's most expensive cities.",
+    "Affordable private hotel rooms from $25/night in the world's most expensive cities.",
   robotLine: "Fully operated by robots.",
   promise:
     "Private rooms. Shared energy. Hotel-level cleanliness. Hostel-level affordability.",
@@ -51,11 +51,11 @@ export const pricing = {
     {
       id: "solo",
       name: "Solo room",
-      price: 25,
+      price: 20,
       unit: "/ person / night",
       perPerson: true,
       description:
-        "Private room for one. From €25 in Berlin & London, $40 in San Francisco. Robot-cleaned. No front desk.",
+        "Private room for one. From €20 in Berlin & London, $35 in San Francisco. Robot-cleaned. No front desk.",
       features: [
         "7–9 m² private room",
         "Private bathroom pod",
@@ -68,12 +68,12 @@ export const pricing = {
     {
       id: "duo",
       name: "Duo room",
-      price: 20,
+      price: 10,
       unit: "/ person / night",
       perPerson: true,
-      roomTotal: "From €40/night for two (Berlin) · $70 in SF",
+      roomTotal: "From €20/night for two (Berlin) · $50 in SF",
       description:
-        "Two guests, one private room. From €20/person in Berlin & London, $35/person in San Francisco.",
+        "Two guests, one private room. From €10/person in Berlin & London, $25/person in San Francisco.",
       features: [
         "10–13 m² private room",
         "Private bathroom pod",
@@ -85,9 +85,9 @@ export const pricing = {
     },
   ],
   normal: {
-    solo: { launch: "25–40", normal: "28–45", peak: "35–55" },
-    duoPerPerson: { launch: "20–35", normal: "22–38", peak: "28–45" },
-    duoTotal: { launch: "40–70", normal: "44–76", peak: "56–90" },
+    solo: { launch: "20–35", normal: "22–40", peak: "28–48" },
+    duoPerPerson: { launch: "10–25", normal: "12–28", peak: "18–35" },
+    duoTotal: { launch: "20–50", normal: "24–56", peak: "36–70" },
   },
   addons: [
     { name: "Community day pass", price: "$10–20" },
@@ -111,9 +111,9 @@ export const pricing = {
         currency: "USD",
         comparableLow: 165,
         comparableHigh: 255,
-        outpostSolo: 40,
-        outpostDuoPerPerson: 35,
-        outpostDuoTotal: 70,
+        outpostSolo: 35,
+        outpostDuoPerPerson: 25,
+        outpostDuoTotal: 50,
       },
       {
         id: "berlin",
@@ -122,9 +122,9 @@ export const pricing = {
         currency: "EUR",
         comparableLow: 95,
         comparableHigh: 165,
-        outpostSolo: 25,
-        outpostDuoPerPerson: 20,
-        outpostDuoTotal: 40,
+        outpostSolo: 20,
+        outpostDuoPerPerson: 10,
+        outpostDuoTotal: 20,
       },
       {
         id: "london",
@@ -133,9 +133,9 @@ export const pricing = {
         currency: "GBP",
         comparableLow: 130,
         comparableHigh: 220,
-        outpostSolo: 25,
-        outpostDuoPerPerson: 20,
-        outpostDuoTotal: 40,
+        outpostSolo: 20,
+        outpostDuoPerPerson: 10,
+        outpostDuoTotal: 20,
       },
     ],
   },

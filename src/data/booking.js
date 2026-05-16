@@ -21,21 +21,21 @@ export const roomTypes = {
 export const cityRates = {
   "san-francisco": {
     currency: "USD",
-    soloPerPerson: 40,
-    duoPerPerson: 35,
-    fromPrice: 35,
+    soloPerPerson: 35,
+    duoPerPerson: 25,
+    fromPrice: 25,
   },
   berlin: {
     currency: "EUR",
-    soloPerPerson: 25,
-    duoPerPerson: 20,
-    fromPrice: 20,
+    soloPerPerson: 20,
+    duoPerPerson: 10,
+    fromPrice: 10,
   },
   london: {
     currency: "GBP",
-    soloPerPerson: 25,
-    duoPerPerson: 20,
-    fromPrice: 20,
+    soloPerPerson: 20,
+    duoPerPerson: 10,
+    fromPrice: 10,
   },
 }
 
