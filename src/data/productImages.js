@@ -6,6 +6,7 @@ export const productImageByTitle = {
   "Private bathroom": images.bathroom,
   "Private hotel room": robots.fleet,
   "Fully operated by robots": robots.walk,
+  /** pictures/hotel → workspace.jpg (pod desk + lamp) */
   "Fast internet": images.workspace,
   "Great lighting": images.lighting,
   "24/7 access": robots.checkin,
@@ -16,8 +17,8 @@ export const productImageByTitle = {
 export const productThumbObjectPosition = {
   "Private hotel room": "50% 42%",
   "Fully operated by robots": "55% 50%",
-  "Fast internet": "28% 38%",
-  "Great lighting": "50% 45%",
+  "Fast internet": "42% 48%",
+  "Great lighting": "50% 38%",
   "24/7 access": "78% 40%",
   "Community area": "50% 35%",
 }
