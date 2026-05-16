@@ -1,7 +1,9 @@
 const TABLE = "outpost_city_suggestions"
 
 function supabaseConfig() {
-  const url = process.env.SUPABASE_URL?.replace(/\/$/, "")
+  const rawUrl =
+    process.env.SUPABASE_URL ?? process.env.NEXT_PUBLIC_SUPABASE_URL ?? ""
+  const url = rawUrl.replace(/\/$/, "")
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY
   return { url, key }
 }
