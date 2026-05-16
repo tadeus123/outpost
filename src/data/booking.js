@@ -27,15 +27,15 @@ export const cityRates = {
   },
   berlin: {
     currency: "EUR",
-    soloPerPerson: 20,
-    duoPerPerson: 10,
-    fromPrice: 10,
+    soloPerPerson: 25,
+    duoPerPerson: 15,
+    fromPrice: 15,
   },
   london: {
     currency: "GBP",
-    soloPerPerson: 20,
-    duoPerPerson: 10,
-    fromPrice: 10,
+    soloPerPerson: 25,
+    duoPerPerson: 15,
+    fromPrice: 15,
   },
 }
 

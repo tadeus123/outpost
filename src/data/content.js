@@ -51,11 +51,11 @@ export const pricing = {
     {
       id: "solo",
       name: "Solo room",
-      price: 20,
+      price: 25,
       unit: "/ person / night",
       perPerson: true,
       description:
-        "Private room for one. From €20 in Berlin & London, $35 in San Francisco. Robot-cleaned. No front desk.",
+        "Private room for one. From €25 in Berlin & £25 in London, $35 in San Francisco. Robot-cleaned. No front desk.",
       features: [
         "7–9 m² private room",
         "Private bathroom pod",
@@ -68,12 +68,12 @@ export const pricing = {
     {
       id: "duo",
       name: "Duo room",
-      price: 10,
+      price: 15,
       unit: "/ person / night",
       perPerson: true,
-      roomTotal: "From €20/night for two (Berlin) · $50 in SF",
+      roomTotal: "From €30/night for two (Berlin) · $50 in SF",
       description:
-        "Two guests, one private room. From €10/person in Berlin & London, $25/person in San Francisco.",
+        "Two guests, one private room. From €15/person in Berlin & £15/person in London, $25/person in San Francisco.",
       features: [
         "10–13 m² private room",
         "Private bathroom pod",
@@ -85,9 +85,9 @@ export const pricing = {
     },
   ],
   normal: {
-    solo: { launch: "20–35", normal: "22–40", peak: "28–48" },
-    duoPerPerson: { launch: "10–25", normal: "12–28", peak: "18–35" },
-    duoTotal: { launch: "20–50", normal: "24–56", peak: "36–70" },
+    solo: { launch: "25–35", normal: "28–40", peak: "32–48" },
+    duoPerPerson: { launch: "15–25", normal: "16–28", peak: "20–35" },
+    duoTotal: { launch: "30–50", normal: "32–56", peak: "40–70" },
   },
   addons: [
     { name: "Community day pass", price: "$10–20" },
@@ -122,9 +122,9 @@ export const pricing = {
         currency: "EUR",
         comparableLow: 95,
         comparableHigh: 165,
-        outpostSolo: 20,
-        outpostDuoPerPerson: 10,
-        outpostDuoTotal: 20,
+        outpostSolo: 25,
+        outpostDuoPerPerson: 15,
+        outpostDuoTotal: 30,
       },
       {
         id: "london",
@@ -133,9 +133,9 @@ export const pricing = {
         currency: "GBP",
         comparableLow: 130,
         comparableHigh: 220,
-        outpostSolo: 20,
-        outpostDuoPerPerson: 10,
-        outpostDuoTotal: 20,
+        outpostSolo: 25,
+        outpostDuoPerPerson: 15,
+        outpostDuoTotal: 30,
       },
     ],
   },
