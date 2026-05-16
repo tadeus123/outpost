@@ -43,8 +43,8 @@ export const images = {
     gallery4: p("robot-gallery-4.png"),
   },
 
-  /** Three-shot editorial grid: fleet hero, second humanoid, private bath */
-  gallery: [p("robot-fleet.png"), p("robot-gallery-2.png"), bath],
+  /** Three-shot editorial grid: pod room (main), in-room desk, private bath */
+  gallery: [room, workspace, bath],
 
   cities: {
     "san-francisco": "/images/cities/san-francisco.jpg",
