@@ -24,7 +24,8 @@ export const images = {
   hallway: room,
 
   robots: {
-    hero: p("robot-hero.png"),
+    /** robot-hero.png is only 376px wide — too soft when cover-cropped large */
+    hero: p("robot-automation.png"),
     fleet: p("robot-fleet.png"),
     housekeeping: p("robot-housekeeping.png"),
     logistics: p("robot-logistics.png"),

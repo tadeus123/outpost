@@ -10,11 +10,11 @@ const positions = {
   "/images/community.jpg": "52% 48%",
 
   "/pictures/robot-hero.png": "50% 8%",
+  "/pictures/robot-automation.png": "50% 30%",
   "/pictures/robot-fleet.png": "50% 42%",
   "/pictures/robot-housekeeping.png": "52% 38%",
   "/pictures/robot-logistics.png": "50% 35%",
   "/pictures/robot-patrol.png": "55% 45%",
-  "/pictures/robot-automation.png": "48% 28%",
   "/pictures/robot-checkin.png": "78% 40%",
   "/pictures/robot-gallery-1.png": "42% 40%",
   "/pictures/robot-gallery-2.png": "50% 45%",

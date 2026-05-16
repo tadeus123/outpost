@@ -24,6 +24,9 @@ export default function RobotSection({ showLink = true, compact = false }) {
               src={images.robots.hero}
               alt="Figure humanoid at Outpost"
               className="absolute inset-0 h-full w-full object-cover"
+              objectPosition="50% 28%"
+              priority
+              sizes="(min-width: 1024px) 560px, 100vw"
               gradientIndex={0}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c1917]/60 via-transparent to-transparent lg:bg-gradient-to-l lg:from-[#1c1917]/40 lg:via-transparent" />
