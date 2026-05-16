@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import BookLink from "../components/BookLink"
 import Image from "../components/Image"
 import PhotoFrame from "../components/PhotoFrame"
 import PhotoGallery from "../components/PhotoGallery"
@@ -18,9 +19,9 @@ export default function Home() {
           <h1 className="headline-hero mt-5">{brand.headline}</h1>
           <p className="lead mx-auto mt-8 max-w-[540px]">{brand.pitch}</p>
           <div className="mt-14 flex flex-col items-center gap-5 sm:flex-row sm:justify-center">
-            <Link to="/book" className="btn">
+            <BookLink to="/book" className="btn">
               Book a room
-            </Link>
+            </BookLink>
             <Link to="/how-it-works" className="link-quiet text-[14px]">
               How robots run it
             </Link>
@@ -28,7 +29,7 @@ export default function Home() {
         </div>
 
         <div className="hero-split page-wide">
-          <Link
+          <BookLink
             to="/book"
             className="hero-split-image group block overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-op-text)]"
           >
@@ -39,7 +40,7 @@ export default function Home() {
               priority
               sizes="(min-width: 768px) 1200px, 100vw"
             />
-          </Link>
+          </BookLink>
         </div>
       </section>
 
@@ -173,9 +174,9 @@ export default function Home() {
             subtitle="Private hotel rooms in expensive cities — fully operated by robots."
             align="center"
           />
-          <Link to="/book" className="btn mt-14">
+          <BookLink to="/book" className="btn mt-14">
             Book your Outpost
-          </Link>
+          </BookLink>
         </div>
       </section>
     </>

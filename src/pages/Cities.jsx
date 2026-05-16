@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import BookLink from "../components/BookLink"
 import Image from "../components/Image"
 import SectionHeading from "../components/SectionHeading"
 import { cities } from "../data/content"
@@ -21,7 +21,7 @@ export default function Cities() {
 
       <div className="page-wide mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {real.slice(0, 6).map((city) => (
-          <Link
+          <BookLink
             key={city.id}
             to={openIds.has(city.id) ? `/book?city=${city.id}#book-details` : "/book"}
             className="group overflow-hidden rounded-lg border border-[var(--color-op-line)] bg-[var(--color-op-surface)] transition hover:shadow-[0_12px_40px_-12px_rgba(28,25,23,0.12)]"
@@ -37,7 +37,7 @@ export default function Cities() {
               <h3 className="text-[16px] font-medium">Outpost {city.name}</h3>
               <p className="mt-1 text-[13px] text-[var(--color-op-muted)]">{city.areas}</p>
             </div>
-          </Link>
+          </BookLink>
         ))}
       </div>
 
@@ -54,9 +54,9 @@ export default function Cities() {
               <p className="mt-1 text-[13px] text-[var(--color-op-faint)]">{city.region}</p>
             </div>
             {openIds.has(city.id) ? (
-              <Link to={`/book?city=${city.id}#book-details`} className="link-quiet shrink-0 text-[13px]">
+              <BookLink to={`/book?city=${city.id}#book-details`} className="link-quiet shrink-0 text-[13px]">
                 Book →
-              </Link>
+              </BookLink>
             ) : (
               <span className="label shrink-0 capitalize">{city.status}</span>
             )}
@@ -65,7 +65,7 @@ export default function Cities() {
       </ul>
 
       <p className="page-narrow mt-20 text-center">
-        <Link to="/book" className="btn">Book a room</Link>
+        <BookLink to="/book" className="btn">Book a room</BookLink>
       </p>
     </section>
   )

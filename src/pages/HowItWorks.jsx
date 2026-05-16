@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import BookLink from "../components/BookLink"
 import Image from "../components/Image"
 import PhotoFrame from "../components/PhotoFrame"
 import SectionHeading from "../components/SectionHeading"
@@ -91,7 +91,7 @@ export default function HowItWorks() {
           ))}
         </div>
         <p className="page-narrow mt-16 text-center">
-          <Link to="/book" className="btn">Book a room</Link>
+          <BookLink to="/book" className="btn">Book a room</BookLink>
         </p>
       </section>
     </>

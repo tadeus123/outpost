@@ -64,8 +64,9 @@ export default function Book() {
   useEffect(() => {
     if (!cityId || !city?.open) return
     if (window.location.hash !== "#book-details") return
-    scrollToId("book-details")
+    scrollToId("book-details", "auto")
   }, [cityId, city?.open])
+
   const nights = nightsBetween(checkIn, checkOut)
   const guests = roomTypes[roomType]?.maxGuests ?? 1
   const pricing = calculateTotal(roomType, nights, guests)

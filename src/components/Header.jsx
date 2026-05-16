@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link, NavLink } from "react-router-dom"
+import BookLink from "./BookLink"
 import { brand } from "../data/content"
 
 const nav = [
@@ -47,15 +48,15 @@ export default function Header() {
               {label}
             </NavLink>
           ))}
-          <Link to="/book" className="btn !min-h-[40px] !px-5 !py-2 !text-[13px]">
+          <BookLink to="/book" className="btn !min-h-[40px] !px-5 !py-2 !text-[13px]">
             Book
-          </Link>
+          </BookLink>
         </nav>
 
         <div className="flex items-center gap-3 md:hidden">
-          <Link to="/book" className="flex min-h-[44px] min-w-[44px] items-center justify-center text-[13px] font-medium">
+          <BookLink to="/book" className="flex min-h-[44px] min-w-[44px] items-center justify-center text-[13px] font-medium">
             Book
-          </Link>
+          </BookLink>
           <button
             type="button"
             className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg text-[13px] active:bg-[var(--color-op-line)]"
@@ -88,9 +89,9 @@ export default function Header() {
               {label}
             </NavLink>
           ))}
-          <Link to="/book" onClick={() => setOpen(false)} className="btn mt-4 w-full">
+          <BookLink to="/book" onClick={() => setOpen(false)} className="btn mt-4 w-full">
             Book a room
-          </Link>
+          </BookLink>
         </nav>
       )}
     </header>

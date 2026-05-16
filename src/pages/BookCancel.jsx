@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import BookLink from "../components/BookLink"
 
 export default function BookCancel() {
   return (
@@ -6,9 +6,9 @@ export default function BookCancel() {
       <div className="page-narrow w-full text-center">
         <h1 className="headline-section">Checkout canceled</h1>
         <p className="lead mx-auto mt-6 max-w-sm">No charge was made. Your dates are still available.</p>
-        <Link to="/book" className="btn mt-12">
+        <BookLink to="/book" className="btn mt-12">
           Continue booking
-        </Link>
+        </BookLink>
       </div>
     </div>
   )

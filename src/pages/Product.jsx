@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import BookLink from "../components/BookLink"
 import Image from "../components/Image"
 import PhotoFrame from "../components/PhotoFrame"
 import PhotoGallery from "../components/PhotoGallery"
@@ -110,9 +111,9 @@ export default function Product() {
             <Link to="/how-it-works" className="link-quiet mr-8 text-[14px]">
               How robots run it
             </Link>
-            <Link to="/book" className="btn">
+            <BookLink to="/book" className="btn">
               Book a room
-            </Link>
+            </BookLink>
           </p>
         </div>
       </section>

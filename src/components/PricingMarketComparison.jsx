@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import BookLink from "./BookLink"
 import SectionHeading from "./SectionHeading"
 import { pricing } from "../data/content"
 import { formatMoney } from "../data/booking"
@@ -63,9 +63,9 @@ export default function PricingMarketComparison() {
       </div>
       <p className="photo-caption mt-8 max-w-xl">{data.footnote}</p>
       <p className="mt-10">
-        <Link to="/book" className="btn">
+        <BookLink to="/book" className="btn">
           Book a room
-        </Link>
+        </BookLink>
       </p>
     </section>
   )

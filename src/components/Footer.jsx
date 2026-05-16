@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import BookLink from "./BookLink"
 import { brand } from "../data/content"
 
 export default function Footer() {
@@ -16,7 +17,7 @@ export default function Footer() {
           <Link to="/cities" className="hover:text-[var(--color-op-text)]">Cities</Link>
           <Link to="/pricing" className="hover:text-[var(--color-op-text)]">Pricing</Link>
           <Link to="/how-it-works" className="hover:text-[var(--color-op-text)]">How it works</Link>
-          <Link to="/book" className="hover:text-[var(--color-op-text)]">Book</Link>
+          <BookLink to="/book" className="hover:text-[var(--color-op-text)]">Book</BookLink>
         </nav>
       </div>
       <div className="page-wide pb-10 text-[12px] text-[var(--color-op-faint)]">

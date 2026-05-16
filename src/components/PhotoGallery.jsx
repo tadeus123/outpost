@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import BookLink from "./BookLink"
 import Image from "./Image"
 
 function GalleryCell({ src, className, gradientIndex, bookLink }) {
@@ -13,12 +13,12 @@ function GalleryCell({ src, className, gradientIndex, bookLink }) {
 
   if (bookLink) {
     return (
-      <Link
+      <BookLink
         to="/book"
         className={`group block h-full w-full overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-op-text)] ${className}`}
       >
         {image}
-      </Link>
+      </BookLink>
     )
   }
 

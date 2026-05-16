@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import BookLink from "./BookLink"
 import { pricing } from "../data/content"
 
 export default function PricingCards() {
@@ -30,9 +30,9 @@ export default function PricingCards() {
             {plan.roomTotal && (
               <p className="mt-2 text-[13px] text-[var(--color-op-muted)]">{plan.roomTotal}</p>
             )}
-            <Link to={`/book?room=${plan.id}`} className="btn mt-8 !px-5 !py-2.5 !text-[13px]">
+            <BookLink to={`/book?room=${plan.id}`} className="btn mt-8 !px-5 !py-2.5 !text-[13px]">
               Book & pay
-            </Link>
+            </BookLink>
           </div>
         </article>
       ))}

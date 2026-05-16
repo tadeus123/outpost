@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import BookLink from "../components/BookLink"
 import SectionHeading from "../components/SectionHeading"
 import PricingCards from "../components/PricingCards"
 import PricingMarketComparison from "../components/PricingMarketComparison"
@@ -67,9 +67,9 @@ export default function Pricing() {
           </div>
 
           <p className="mt-20 text-center">
-            <Link to="/book" className="btn">
+            <BookLink to="/book" className="btn">
               Book a room
-            </Link>
+            </BookLink>
           </p>
         </div>
       </section>
